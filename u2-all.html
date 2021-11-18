@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background &#8212; OMSCS Bayesian Statistics</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic Distributions (Unit 4.1)" href="u4-1.html" />
+    <link rel="prev" title="Welcome" href="0-index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">OMSCS Bayesian Statistics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="0-index.html">
+   Welcome
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Background
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="u4-1.html">
+   Basic Distributions (Unit 4.1)
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="u4l1-random-variable-properties.html">
+     Random Variable Properties
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="u4l2-joint-distributions.html">
+     Joint Distributions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="u4l3-basic-distributions.html">
+     Basic Distributions
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/u2-all.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/matthewcaseres/OMSCS Bayesian Statistics"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/matthewcaseres/OMSCS Bayesian Statistics/issues/new?title=Issue%20on%20page%20%2Fu2-all.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverend-thomas-bayes">
+   Reverend Thomas Bayes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-vs-bayesian">
+   Classical vs. Bayesian
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-vs-bayesian-statistics">
+   Classical vs. Bayesian statistics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coin-flips-example">
+     Coin flips example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fda-guidance">
+   FDA Guidance
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="background">
+<h1>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reverend-thomas-bayes">
+<h2>Reverend Thomas Bayes<a class="headerlink" href="#reverend-thomas-bayes" title="Permalink to this headline">¶</a></h2>
+<p>Professor Vidakovic gives details on the life and work of Reverand Thomas Bayes. I am not sure we will be tested on any of this, but the curious student can find details on <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Bayes">wikipedia</a>.</p>
+<ul class="simple">
+<li><p>Lecture 1 covers the wikipedia section on Bayes’ biography</p></li>
+<li><p>Lecture 2 covers the wikipedia section on Bayes’ famous essay</p></li>
+</ul>
+</div>
+<div class="section" id="classical-vs-bayesian">
+<h2>Classical vs. Bayesian<a class="headerlink" href="#classical-vs-bayesian" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="classical-vs-bayesian-statistics">
+<h2>Classical vs. Bayesian statistics<a class="headerlink" href="#classical-vs-bayesian-statistics" title="Permalink to this headline">¶</a></h2>
+<p><img alt="" src="_images/classical-vs-bayesian.png" /></p>
+<div class="section" id="coin-flips-example">
+<h3>Coin flips example<a class="headerlink" href="#coin-flips-example" title="Permalink to this headline">¶</a></h3>
+<p>Suppose we flip a coin 10 times and get 10 tails.</p>
+<p>If the probability of getting heads is <span class="math notranslate nohighlight">\(p\)</span> then the probability of this happening is <span class="math notranslate nohighlight">\((1-p)^{10}\)</span>. The probability of this happening is maximized when <span class="math notranslate nohighlight">\(p=0\)</span>, and the frequentist approach will estimate that <span class="math notranslate nohighlight">\(p=0\)</span>.</p>
+<p>In a Bayesian approach we find the probability distribution of our unknown parameter given some prior distribution. <strong>We omit some details for now</strong>.</p>
+<p>We have an initial estimate of the probability distribution of <span class="math notranslate nohighlight">\(p\)</span> as being uniform on the interval <span class="math notranslate nohighlight">\([0,1]\)</span>. We update this estimate with the likelihood from our experiment and get a new probability density function</p>
+<div class="math notranslate nohighlight">
+\[11(1-p)^{10}\]</div>
+<p>We can now get more meaningful information about the probability distribution like the</p>
+<ul class="simple">
+<li><p>mean = 1/12</p></li>
+<li><p>median = <span class="math notranslate nohighlight">\((-.5)^{\frac{1}{11}}+1\)</span> = .061069</p></li>
+<li><p>mode = 0</p></li>
+</ul>
+<p>Bayesian statistics gives us a full distribution of a parameter of interest.</p>
+</div>
+</div>
+<div class="section" id="fda-guidance">
+<h2>FDA Guidance<a class="headerlink" href="#fda-guidance" title="Permalink to this headline">¶</a></h2>
+<p>Professor Vidakovic summarizes <a class="reference external" href="https://www.fda.gov/media/71512/download">FDA guidance on the use of Bayesian statistics</a>.</p>
+<p>The FDA is advocating for the use of Bayesian methods in development of medical devices.</p>
+<ul class="simple">
+<li><p>Prior information from other devices with similar mechanisms of action is available and can be used by Bayesian methods.</p></li>
+<li><p>Bayesian approaches may be simpler and less burdensome.</p></li>
+<li><p>Prior information may reduce the required size of the trial.</p></li>
+<li><p>Size of a trial can be reduced by early stopping</p>
+<ul>
+<li><p>Early stopping is more controversial when using frequentist methods compared to Bayesian</p></li>
+</ul>
+</li>
+<li><p>Multiplicity problems are easier when using Bayesian approaches.</p></li>
+<li><p>Missing data is handled more gracefully by Bayesian approaches.</p></li>
+<li><p>Unlimited looks at the data are okay in Bayesian approaches, more complicated in frequentist approaches and involve “Alpha spending”</p></li>
+</ul>
+<p>The ability to stop the trial early due to <strong>inferiority</strong> (the method is not good) or <strong>superiority</strong> (the method shows itself to be good) reduces the human and economic costs of medical trials.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="0-index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Welcome</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="u4-1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Basic Distributions (Unit 4.1)</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By GitHub Contributor<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
