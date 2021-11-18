@@ -1,0 +1,9 @@
+format: jb-book
+root: 0-index
+chapters:
+  - file: u2-all
+  - file: u4-1
+    sections:
+      - file: u4l1-random-variable-properties
+      - file: u4l2-joint-distributions
+      - file: u4l3-basic-distributions
