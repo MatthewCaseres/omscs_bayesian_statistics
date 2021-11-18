@@ -7,3 +7,9 @@ chapters:
       - file: u4l1-random-variable-properties
       - file: u4l2-joint-distributions
       - file: u4l3-basic-distributions
+      - file: u4l4-bayesian-inference-ingredients
+      - file: u4l5-conjugate-families
+      - file: u4l9-bayesian-conjugate
+      - file: u4l10-credible-sets
+      - file: u4l12-bayesian-testing
+      - file: u4l13-bayesian-prediction
